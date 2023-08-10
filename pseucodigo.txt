@@ -1,0 +1,34 @@
+PSEUDO-CÓDIGO:
+DFS(u)
+u.visitado = true
+adjVermelho = false;
+for v E G(u)
+ se v.visitado = false
+  DFS(v)
+ se v.baseVermelha = true
+  adjVermelho = true;
+
+se u.adjVermelho = false;
+  u.baseVermelha = true;
+  base = base +1
+FIM DFS
+
+MAIN
+ler T
+
+for i=0; até i < T; i++
+ler N
+ for i=1; até i <= N; i++
+   limpar grafo
+   i.visitado = false
+   i.baseVermelha = false
+ for i=0; i<N-1; i++
+ Ler u e v
+ u.addAdj[v]
+ v.addAjd[u]
+bases = 0;
+DFS(1);
+
+imprimir bases
+
+FIM MAIN
